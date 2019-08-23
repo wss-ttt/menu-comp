@@ -2,7 +2,8 @@
   <div class="sidebar">
     <el-button @click="sidebarFold = !sidebarFold">展开/折叠</el-button>
     <el-menu
-      :default-active="'home-1'"
+      class="menu"
+      :default-active="'home'"
       :collapse="sidebarFold"
       background-color="#545c64"
       text-color="#fff"
@@ -76,7 +77,20 @@ export default {
 }
 </script>
 <style scoped>
-.sidebar {
+.menu:not(.el-menu--collapse) {
+  width: 200px;
+}
+
+/* .sidebar{
   width: 220px;
+} */
+</style>
+<style>
+.menu.el-menu--collapse  span {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: inline-block;
 }
 </style>

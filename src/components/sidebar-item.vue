@@ -1,4 +1,5 @@
 <template>
+<div>
   <el-submenu
     v-if="menu.list && menu.list.length >= 1"
     :index="menu.menuId + ''"
@@ -13,6 +14,7 @@
     <i :class="menu.icon"></i>
     <span>{{ menu.name }}</span>
   </el-menu-item>
+  </div>
 </template>
 <script>
 export default {
